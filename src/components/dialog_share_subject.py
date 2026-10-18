@@ -4,7 +4,7 @@ import io
 
 @st.dialog("Share Class Link")
 def share_subject_dialog(subject_name,subject_code):
-  app_domain = "pehchaanAI-main.streamlit.app"
+  app_domain = "pehchaan-ai-main.streamlit.app"
 
   join_url = f"{app_domain}/?join-code={subject_code}"
 
