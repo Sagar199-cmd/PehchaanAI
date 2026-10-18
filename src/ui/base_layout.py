@@ -61,7 +61,7 @@ def style_base_layout():
 
             h1 {
                 font-family: 'Climate Crisis', sans-serif !important;
-                font-size: 2rem !important;
+                font-size: 1.8rem !important;
                 line-height:0.9 1important;
                 margin-bottom:0rem !important;
             }
@@ -120,6 +120,25 @@ def style_base_layout():
                 border: none !important;
                 transition: transform 0.25s ease-in-out !important;
                 }
+
+            div[data-testid="stHorizontalBlock"]:has(.st-key-go_back_teacher) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            div[data-testid="stHorizontalBlock"]:has(.st-key-go_back_teacher) > div[data-testid="stColumn"] {
+                flex: 0 0 auto !important;
+                width: auto !important;
+                min-width: 0 !important;
+            }
+
+            .st-key-go_back_teacher [data-testid="stButton"],
+            .st-key-go_back_teacher button {
+                flex-shrink: 0 !important;
+                white-space: nowrap !important;
+            }
 
             button:hover{
                 transform :scale(1.05)}

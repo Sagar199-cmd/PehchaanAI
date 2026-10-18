@@ -116,17 +116,17 @@ def student_dashboard():
 
 def student_screen():
     style_background_dashboard()
-    col1 , col2 = st.columns(2, vertical_alignment='center',gap = 'xxlarge')
+    header_col, back_col = st.columns(2, vertical_alignment='center',gap = 'small')
 
 
     if "student_data" in st.session_state:
         student_dashboard()
         return 
     
-    with col1:
+    with header_col:
         header_dashboard()
     
-    with col2:
+    with back_col:
         if st.button('Go Back',type='secondary' , key = 'go_back_teacher', icon=':material/arrow_back:', icon_position='left' , shortcut='ctrl+backspace'):
             st.session_state['login_type'] = None
             st.query_params.clear()

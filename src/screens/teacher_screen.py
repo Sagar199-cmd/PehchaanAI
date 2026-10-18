@@ -345,12 +345,12 @@ def register_teacher(username,name,password,password_confirm):
 
 def teacher_screen_register():
 
-    col1 , col2 = st.columns(2, vertical_alignment='center',gap = 'xxlarge')
+    header_col, back_col = st.columns(2, vertical_alignment='center',gap = 'small')
     
-    with col1:
+    with header_col:
         header_dashboard()
     
-    with col2:
+    with back_col:
         if st.button('Go Back',type='secondary' , key = 'go_back_teacher', icon=':material/arrow_back:', icon_position='left' , shortcut='ctrl+backspace'):
             st.session_state['login_type'] = None
             st.rerun()
@@ -392,12 +392,12 @@ def teacher_screen_register():
 
 def teacher_screen_login():
     
-    col1 , col2 = st.columns(2, vertical_alignment='center',gap = 'xxlarge')
+    header_col, back_col = st.columns(2, vertical_alignment='center',gap = 'small')
     
-    with col1:
+    with header_col:
         header_dashboard()
     
-    with col2:
+    with back_col:
         if st.button('Go Back',type='secondary' , key = 'go_back_teacher', icon=':material/arrow_back:', icon_position='left' , shortcut='ctrl+backspace'):
             st.session_state.teacher_login_type = 'register'
             st.rerun()
